@@ -1,0 +1,35 @@
+@mixin text__title-large {
+  font-family: "Galien";
+  font-size: 4em;
+  line-height: 116%;
+  letter-spacing: 0.04em;
+}
+
+
+//36px
+@mixin text__title-medium {
+  font-family: "Gilroy SemiBold";
+  font-size: 2.25em;
+  line-height: 128%;
+}
+
+
+//20px
+@mixin text__title-small {
+  font-family: "Gilroy SemiBold";
+  font-size: 1.25em;
+  line-height: 150%;
+}
+
+//16px
+@mixin text__common {
+  font-size: 1em;
+  line-height: 162%;
+}
+
+//14px
+
+@mixin text__common-small {
+  font-size: 1em;
+  line-height: 162%;
+}
