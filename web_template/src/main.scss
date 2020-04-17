@@ -43,6 +43,10 @@ li {
   list-style: none;
 }
 
+
+$clientsBorder: 1px solid #ffffff4f;
+
+
 .btn {
   @include text__common;
 
@@ -76,11 +80,15 @@ body {
   height: 48px;
   margin: auto;
   padding: 40px 25px 0;
-}
 
-.nav {
-  width: 32px;
-  height: 32px;
+  &__menu-icon {
+    display: flex;
+  }
+
+  @include media_query(mobile_large) {
+    width: unset;
+  }
+
 }
 
 // ------hero----
@@ -88,8 +96,14 @@ body {
   position: relative;
   color: $blue_01;
   background: linear-gradient(rgba(152, 195, 232, 0), rgba(152, 195, 232, .2)), url("images/hero-bg.png") no-repeat;
+  //background-size: cover;
   background-position-x: 95%;
   background-position-y: -200%;
+
+  @include media_query(tablet_large) {
+    background: linear-gradient(rgba(152, 195, 232, 0), rgba(152, 195, 232, .2)) no-repeat;
+    //  background-size: cover;
+  }
 
   &-container {
     padding-top: 48px;
@@ -101,6 +115,11 @@ body {
 
     max-width: 513px;
     margin-top: 40px;
+
+    @include media_query(mobile_small) {
+      font-size: 3em;
+    }
+
   }
 
   &__description {
@@ -126,6 +145,11 @@ body {
     color: $blue_02;
     max-width: 360px;
     margin-bottom: -165px;
+
+    @include media_query(tablet_small) {
+      margin-bottom: 0;
+    }
+
   }
 
   &__list {
@@ -143,12 +167,23 @@ body {
     &-inner-left {
       margin-right: 9.4%;
       margin-left: 8.5%;
+
+      @include media_query(tablet_small) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
+
+    @include media_query(tablet_small) {
+      flex-direction: column;
+    }
+
   }
 
   &-technology {
     margin-bottom: 100px;
   }
+
 }
 
 .card__content {
@@ -158,7 +193,13 @@ body {
   margin: 48px;
 
   @include media_query(tablet_large) {
+    min-width: 200px;
   }
+
+  @include media_query(mobile_large) {
+    min-width: 150px;
+  }
+
 
   &-title {
     @include text__title-small;
@@ -206,6 +247,14 @@ body {
   &-digital {
     margin-left: -24px;
   }
+
+  @include media_query(mobile_meduim) {
+    max-width: 100%;
+
+    &-internet {
+      margin-left: -20px;
+    }
+  }
 }
 
 .services {
@@ -235,6 +284,11 @@ body {
     width: 230px;
     margin-right: 97px;
     text-transform: capitalize;
+
+    @include media_query(mobile_large) {
+      padding-top: 50px;
+    }
+
   }
 
   &__description {
@@ -261,7 +315,7 @@ body {
       font-weight: 600;
       line-height: 230%;
       letter-spacing: 0.02em;
-      border-right: 1px solid #ffffff4f;
+      border-right: $clientsBorder;
     }
 
     &-more {
@@ -270,7 +324,7 @@ body {
     }
 
     :nth-child(-n+4) {
-      border-bottom: 1px solid #ffffff4f;
+      border-bottom: $clientsBorder;
     }
 
     :nth-child(4n) {
@@ -291,6 +345,63 @@ body {
         opacity: 0.2;
       }
     }
+
+    @include media_query(tablet_large) {
+      &-item {
+        border-right: $clientsBorder;
+      }
+
+      :nth-child(-n+4) {
+        border-right: $clientsBorder;
+      }
+
+      :nth-child(-n+6) {
+        border-bottom: $clientsBorder;
+      }
+
+      :nth-child(3n) {
+        border-right: none;
+      }
+    }
+
+    @include media_query(tablet_small) {
+      &-item {
+        border-right: none;
+        border-bottom: $clientsBorder;
+      }
+
+      :nth-child(2n) {
+        border-left: $clientsBorder;
+      }
+
+      :nth-child(-n+4) {
+        border-right: none;
+      }
+
+      :nth-child(7) {
+        border-bottom: none;
+      }
+
+
+      :last-child {
+        border-bottom: none;
+      }
+    }
+
+    @include media_query(mobile_large) {
+      &-item {
+        border: none;
+      }
+
+      :nth-child(n) {
+        border: none;
+        border-bottom: $clientsBorder;
+      }
+
+      :last-child {
+        border-bottom: none;
+      }
+    }
   }
 }
 
@@ -308,7 +419,9 @@ body {
     border-top-right-radius: 200px;
     left: 0;
 
-
+    @include media_query(mobile_large) {
+      width: 100%;
+    }
   }
 
   &-container {
@@ -348,6 +461,10 @@ body {
     left: 0;
     background: $white;
     opacity: 0.4;
+
+    @include media_query(tablet_large) {
+      width: 80%;
+    }
   }
 
   &__down {
@@ -355,6 +472,14 @@ body {
     justify-content: space-between;
     max-width: 78.7%;
     padding-top: 86px;
+
+    @include media_query(tablet_large) {
+      max-width: unset;
+    }
+
+    @include media_query(mobile_large) {
+      flex-direction: column;
+    }
   }
 
   &__category {
@@ -390,6 +515,11 @@ body {
     align-items: center;
     margin-bottom: 31px;
     font-weight: 600;
+
+    @include media_query(mobile_large) {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   &__logo {
