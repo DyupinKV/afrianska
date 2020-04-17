@@ -412,6 +412,10 @@ body {
   color: $white;
   background: $blue_04;
 
+  &-contactUs {
+    background: none;
+  }
+
 
   &-bg {
     width: 93%;
@@ -539,4 +543,148 @@ body {
     margin: auto;
     opacity: .4;
   }
+}
+
+
+//        ---------------------------Contact Us------------------------
+
+// ------banner----
+
+.banner {
+  width: 100%;
+  margin-top: 41px;
+  color: $white;
+  background: url(images/banner.png) center no-repeat;
+  background-size: cover;
+
+  &-container {
+    max-width: 780px;
+    padding: 50px 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__title {
+    @include banner_title;
+  }
+
+  &__description {
+    @include text__common-small;
+
+    margin: 16px 0 0;
+    opacity: .6;
+  }
+}
+
+// ------feedback----
+.feedback {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 57px auto 96px;
+    color: $blue_01;
+  }
+}
+
+.relations {
+  &__img {
+    margin: 69px auto 71px;
+  }
+
+  &__category {
+    margin-top: 40px;
+  }
+}
+
+.contact {
+  &__item {
+    &-text {
+      display: flex;
+      max-width: 300px;
+      margin-bottom: 16px;
+      opacity: 0.6;
+      align-items: center;
+
+      a {
+        margin-left: 16px;
+        color: $blue_01;
+      }
+    }
+
+
+    &-name {
+      @include text__title-small;
+
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+
+  &-container {
+    margin: 15px auto;
+    max-width: 79.3%;
+  }
+
+  &__name {
+    @include text__title-small;
+
+    margin: 56px 0 41px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 32px;
+    line-height: 187%;
+    text-transform: capitalize;
+
+    &-label {
+      margin-bottom: 8px;
+    }
+
+    &-input {
+      height: 72px;
+      border: 1px solid rgba(53, 110, 173, 0.4);
+      border-radius: 10px;
+
+      &::placeholder {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-left: 36px;
+        opacity: 0.2;
+      }
+    }
+
+    &-message {
+      height: 144px;
+    }
+  }
+
+  &__button {
+    margin: 72px auto 56px;
+
+    &-btn {
+      width: 100%;
+      box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.map__frame  {
+  width: 100%;
+  height: 480px;
+  margin: auto;
+  margin-bottom: 96px;
+
 }
