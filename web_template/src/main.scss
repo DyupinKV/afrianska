@@ -573,6 +573,11 @@ body {
 
     margin: 16px 0 0;
     opacity: .6;
+
+    @include media_query(tablet_small) {
+      max-width: 90%;
+      margin: auto;
+    }
   }
 }
 
@@ -583,11 +588,17 @@ body {
     justify-content: space-between;
     margin: 57px auto 96px;
     color: $blue_01;
+
+    @include media_query(tablet_small) {
+      flex-direction: column;
+    }
+
   }
 }
 
 .relations {
   &__img {
+    width: 100%;
     margin: 69px auto 71px;
   }
 
@@ -661,6 +672,10 @@ body {
         padding-bottom: 21px;
         padding-left: 36px;
         opacity: 0.2;
+
+        @include media_query(mobile_meduim) {
+          padding: 21px 10px;
+        }
       }
     }
 
@@ -678,6 +693,14 @@ body {
       text-transform: uppercase;
     }
   }
+
+  @include media_query(tablet_large) {
+    margin-left: 15px;
+  }
+
+  @include media_query(tablet_small) {
+    margin: 25px 0 0 0;
+  }
 }
 
 
@@ -686,5 +709,4 @@ body {
   height: 480px;
   margin: auto;
   margin-bottom: 96px;
-
 }
