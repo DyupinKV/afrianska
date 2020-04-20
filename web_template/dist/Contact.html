@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 <header class="header">
     <img src="images/logo.svg" alt="Afrianska" class="header__logo">
     <div class="header__menu-icon">
@@ -31,9 +30,9 @@
     <section class="feedback">
         <div class="container feedback-container">
             <div class="feedback__relations">
-<!--                <div class="relations__img">-->
-                    <img src="images/contact.png" alt="Contacts" class="relations__img">
-<!--                </div>-->
+                <!--                <div class="relations__img">-->
+                <img src="images/contact.png" alt="Contacts" class="relations__img">
+                <!--                </div>-->
                 <div class="relations__category">
                     <div class="relations__category-item contact__item">
                         <h2 class="contact__item-name">Address</h2>
@@ -42,7 +41,6 @@
                             volutpat quam a,
                             pharetra.</p>
                     </div>
-
                 </div>
                 <div class="relations__category">
                     <div class="relations__category-item contact__item">
@@ -60,7 +58,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div class="relations__category">
                     <div class="relations__category-item contact__item">
@@ -76,28 +73,29 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
             <div class="form">
                 <div class="form-container">
                     <h3 class="form__name">Send us message</h3>
-                    <div class="form__item">
-                        <label for="feedback-name" class="form__item-label">Full name</label>
-                        <input type="text" class="form__item-input" id="feedback-name" placeholder="Your name">
-                    </div>
-                    <div class="form__item">
-                        <label for="feedback-email" class="form__item-label">Email</label>
-                        <input type="email" class="form__item-input" id="feedback-email" placeholder="Your email">
-                    </div>
-                    <div class="form__item">
-                        <label for="feedback-message" class="form__item-label">Message</label>
-                        <textarea class="form__item-input form__item-message" id="feedback-message"
-                                  placeholder="Your message"></textarea>
-                    </div>
-                    <div class="form__button">
-                        <button type="submit" class="form__button-btn btn">Submit</button>
-                    </div>
+                    <form action="" method="post" class="contactForm" id="form">
+                        <div class="form__item">
+                            <label for="feedback-name" class="form__item-label">Full name</label>
+                            <input type="text" name="name" class="form__item-input" id="feedback-name" placeholder="Your name">
+                        </div>
+                        <div class="form__item">
+                            <label for="feedback-email" class="form__item-label">Email</label>
+                            <input type="email" name="email" class="form__item-input" id="feedback-email" placeholder="Your email">
+                        </div>
+                        <div class="form__item">
+                            <label for="feedback-message" class="form__item-label">Message</label>
+                            <textarea class="form__item-input form__item-message" name="message" id="feedback-message"
+                                      placeholder="Your message"></textarea>
+                        </div>
+                        <div class="form__button">
+                            <button type="button" class="form__button-btn btn" id="formBtn">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -105,17 +103,15 @@
     <!-- /.feedback -->
     <section class="map">
         <div class="container map-container">
-            <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.252005405692!2d61.372680216029025!3d55.16136704491692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592c7f575ceed%3A0xe455dfac102b6307!2z0KbQuNGE0YDQvtCy0L7QuSDRjdC70LXQvNC10L3Rgiw!5e0!3m2!1sru!2sru!4v1587136556012!5m2!1sru!2sru"
+            <iframe class="map__frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.252005405692!2d61.372680216029025!3d55.16136704491692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592c7f575ceed%3A0xe455dfac102b6307!2z0KbQuNGE0YDQvtCy0L7QuSDRjdC70LXQvNC10L3Rgiw!5e0!3m2!1sru!2sru!4v1587136556012!5m2!1sru!2sru"
                     frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </section>
     <!-- /.map -->
-
 </main>
 <!-- /.main -->
 
-
-</main>
 <footer>
     <div class="footer footer-contactUs">
         <div class="footer-bg">
@@ -128,8 +124,8 @@
                             eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
-                    <button class="btn footer__btn">
-                        <span class="btn__text">Let’s Talk</span>
+                    <button class="btn footer__btn" id="btnFooter">
+                        Let’s Talk
                     </button>
                 </div>
                 <div class="footer__line"></div>
@@ -203,6 +199,10 @@
         </div>
     </div>
 </footer>
-
+<script
+        src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"></script>
+<script src="script/script.js"></script>
 </body>
 </html>
